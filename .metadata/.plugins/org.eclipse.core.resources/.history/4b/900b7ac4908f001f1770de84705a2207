@@ -1,0 +1,25 @@
+package main.filter;
+
+import java.io.BufferedReader;
+import java.util.HashMap;
+import java.util.Map;
+
+import main.utils.BufferReaderUtil;
+
+public class taskIDFilter {
+
+	public static void getLogsOfTaskID(String taskID, String logFilePath)
+	{
+
+		Map<String, Integer> queryMap = new HashMap<>();
+
+		BufferedReader br = BufferReaderUtil.readFile(logFilePath);
+		String line;
+		while ((line = br.readLine()) != null) {
+
+			if (line.contains("task-"+taskID)) 
+				System.out.println(line);
+		}
+	
+	}	
+}

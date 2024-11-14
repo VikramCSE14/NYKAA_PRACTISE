@@ -1,0 +1,24 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args){
+
+	try {
+			//queryFilter.getQueryCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
+			//queryFilter.getParticularQueryStringCount("SELECT  COUNT(DISTINCT obd.ObC" , "SELECT  COUNT(DISTINCT obd.ObC".length() , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
+			//queryFilter.getQueryCount("UPDATE " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
+			//queryFilter.getQueryCount("INSERT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
+			//queryFilter.getParticularQueryStringCount("SELECT  COUNT(DISTINCT obd.ObC " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
+			//queryFilter.getQueryStringCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/logtest.txt" , "Hibernate:");
+			//queryFilter.getParticularQueryStringCount("SELECT  COUNT(DISTINCT obd.ObC"  , "C:/Users/vikram.yadav/Downloads/logtest.txt" , "Hibernate:");
+			//taskIDFilter.getLogsOfTaskID("154" ,"C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			  taskIDFilter.saveLogsOfTaskID("154" ,"C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "C:/Users/vikram.yadav/Downloads/taskId_154_logs.txt");
+	 } catch (Exception e) {
+		e.printStackTrace();
+	 }
+
+	}
+
+		
+}

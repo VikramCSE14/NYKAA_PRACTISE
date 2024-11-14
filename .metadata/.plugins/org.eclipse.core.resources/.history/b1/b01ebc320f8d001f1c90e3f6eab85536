@@ -1,0 +1,26 @@
+package main;
+
+import main.filter.queryFilter;
+
+public class Main {
+
+	public static void main(String[] args){
+
+	try {
+			//queryFilter.getQueryCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//queryFilter.getQueryCount("SELECT  COUNT(DISTINCT obd.ObC" , "SELECT  COUNT(DISTINCT obd.ObC".length() , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//queryFilter.getQueryCount("UPDATE " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//queryFilter.getQueryCount("INSERT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//queryFilter.getQueryCount("SELECT  COUNT(DISTINCT obd.ObC " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			  queryFilter.getQueryStringCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/logtest.txt");
+			  queryFilter.getQueryStringCount("SELECT  COUNT(DISTINCT obd.ObC"  , "C:/Users/vikram.yadav/Downloads/logtest.txt");
+			
+	 } catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+
+	}
+
+		
+}

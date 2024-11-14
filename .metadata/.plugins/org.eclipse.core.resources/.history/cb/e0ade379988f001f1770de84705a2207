@@ -1,0 +1,7 @@
+package exceptions;
+
+public class readAndWriteExceptions extends Exception{
+
+	public 	WrongFilePathException
+	
+}

@@ -1,0 +1,38 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+
+		
+	Map<String,Integer> query = new HashMap<>();
+	
+	 read();
+		}
+
+	public void read() throws Exception
+	{
+		FileReader F = new FileReader("C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+
+		int b;
+		String s = "";
+
+		while ((b = F.read()) != -1) {
+			if (b == 10) {
+				System.out.println(s);
+				s = "";
+
+			} else
+				s += (char) b;
+
+		}
+	 
+	 F.close();	
+		
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+package main.utils;
+
+import java.util.UUID;
+
+public class BuffereWriterUtil {
+
+	public static void writeLogs()
+	{
+		 final String uuid = UUID.randomUUID().toString().replace("-", "");
+		
+	}
+	
+}

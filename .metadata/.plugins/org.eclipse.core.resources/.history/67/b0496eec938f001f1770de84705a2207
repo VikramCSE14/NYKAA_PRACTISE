@@ -1,0 +1,18 @@
+package main.utils;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.UUID;
+
+public class BuffereWriterUtil {
+
+	public static void writeLogs()
+	{
+		 final String uuid = UUID.randomUUID().toString();
+		
+		 BufferedWriter f_writer= new BufferedWriter(new FileWriter("/Users/mayanksolanki/Desktop/demo.docx"));
+		 
+		  f_writer.close();
+	}
+	
+}

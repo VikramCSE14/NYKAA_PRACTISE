@@ -1,0 +1,34 @@
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+
+		
+	Map<String,Integer> query = new HashMap<>();
+	
+	
+	
+	FileReader F=new FileReader("E:/IncludeHelp.txt");
+
+	int b;
+
+
+	while((b=F.read())!=-1)
+	{
+		// Will print the Characters...
+		System.out.print((char)b);
+	}
+
+	// This will close the opened file. 
+	F.close();	
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,58 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Main {
+
+	public static void main(String[] args){
+
+	try {
+			getQueryCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			getQueryCount("SELECT  COUNT(DISTINCT obd.ObC" , "SELECT  COUNT(DISTINCT obd.ObC".length() , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//getQueryCount("UPDATE " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//getQueryCount("INSERT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+			//getQueryCount("SELECT  COUNT(DISTINCT obd.ObC " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt");
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void getQueryCount(String queryString ,int queryStartingCharactersCount, String logFilePath) throws Exception {
+		
+		 Map<String,Integer> queryMap = new TreeMap<>();
+		 File file = new File(logFilePath);
+		
+		 BufferedReader br = new BufferedReader(new FileReader(file));
+
+		 String line;
+		 int i =0;
+		 while ((line = br.readLine()) != null) {
+			
+			if(line.contains("Hibernate:") )
+			{	
+				int index = line.toUpperCase().indexOf(queryString);
+				if(index!=-1)
+				{	
+					String query  = line.substring(index, index+queryStartingCharactersCount) ;
+					queryMap.put(query, (queryMap.get(query)==null ? 1 : queryMap.get(query)+1 ) );
+				}	
+			}
+		 }
+		 
+		 
+		 
+		
+		 System.out.println(queryString+ " type query are as follows:\n");
+		 for (Map.Entry<String, Integer> entry : queryMap.entrySet()) {
+			    System.out.println( entry.getKey() + " =  " + entry.getValue());
+			}	 
+		 System.out.println("\n\n");
+		 
+	}
+}

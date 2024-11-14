@@ -1,0 +1,10 @@
+package exceptions;
+
+public class ReadAndWriteExceptions extends Exception{
+
+	public 	readAndWriteExceptions(String message)
+	{
+		super(message);
+	}
+	
+}
