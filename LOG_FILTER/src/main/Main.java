@@ -10,7 +10,8 @@ public class Main {
 
 	public static void main(String[] args){
 
-	try {
+	try {	
+			//Comment for testing purpose 
 			//QueryFilter.getQueryCount("SELECT " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
 			//QueryFilter.getParticularQueryStringCount("SELECT  COUNT(DISTINCT obd.ObC" , "SELECT  COUNT(DISTINCT obd.ObC".length() , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
 			//QueryFilter.getQueryCount("UPDATE " , 30 , "C:/Users/vikram.yadav/Downloads/eRetailWeblog.txt", "Hibernate:");
